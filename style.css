@@ -25,6 +25,12 @@ html {
   font-size: 62.5%;
 }
 
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -86,6 +92,7 @@ body {
 .header {
   margin-bottom: 13rem;
 }
+
 /* NAVIGATION STYLES */
 .nav {
   display: flex;
@@ -111,6 +118,20 @@ body {
   /* font-size: ; */
 }
 
+@media screen and (max-width: 992px) {
+  .nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav .logo {
+    margin-bottom: 4rem;
+  }
+  .nav-list {
+    /* flex-direction: column; */
+    justify-content: center;
+  }
+}
+
 /* HERO SECTION STYLES */
 .hero-container {
   background-image: url('images/header_bg.png');
@@ -121,9 +142,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-image: url('images/header_bg.png');
-  background-repeat: no-repeat;
-  background-position: bottom center; */
 }
 
 .hero-text-container {
@@ -150,6 +168,7 @@ body {
 
 .btn-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
 }
@@ -163,4 +182,97 @@ body {
   right: -40%;
 }
 
-/* About me */
+@media screen and (max-width: 1400px) {
+  .hero-container {
+    background-image: url('images/header_bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom right -50%;
+  }
+
+  .hero-img {
+    max-width: 58rem;
+    position: relative;
+    right: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 0 4rem;
+  }
+
+  .hero-container {
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero-img-container {
+    display: none;
+  }
+
+  .btn-container {
+    justify-content: center;
+  }
+}
+
+/* SECTION ABOUT ME */
+.about-me {
+  background-color: var(--color-accent);
+  padding: 13rem 15rem;
+}
+
+.about-me h2 {
+  font-size: 5.7rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--dark-01);
+}
+
+.about-me > p {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--dark-03);
+  margin-bottom: 3rem;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.info-box {
+  text-align: center;
+}
+
+.info-box .name {
+  color: var(--dark-03);
+  font-size: 1.8rem;
+}
+
+.info-box .info {
+  color: var(--dark-02);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 992px) {
+  .about-me {
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Breakpoints */
+/* large-device: 1400px */
+/* extra large 1200px */
+/* large 992px*/
